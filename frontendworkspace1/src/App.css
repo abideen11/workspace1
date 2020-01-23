@@ -36,3 +36,23 @@
     transform: rotate(360deg);
   }
 }
+
+.main-head {
+  margin: 0px;
+  padding: 40px;
+  overflow: hidden;
+  background-color: gray;
+}
+.head-tb {
+  float: left;
+  color: white;
+  margin-left: 22px;
+  margin-right: 7px;
+}
+.span-f, .span-s, .span-t {
+  margin-right: 5px;
+}
+.div-sea {
+  float: right;
+  margin-right: 22px;
+}
