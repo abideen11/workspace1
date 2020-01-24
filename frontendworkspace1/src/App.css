@@ -47,12 +47,47 @@
   float: left;
   color: white;
   margin-left: 22px;
-  margin-right: 7px;
 }
 .span-f, .span-s, .span-t {
-  margin-right: 5px;
+  margin-right: 10px;
 }
 .div-sea {
   float: right;
   margin-right: 22px;
+}
+.main-foot {
+  padding: 110px;
+  overflow: hidden;
+  background-color: gray;
+  position: relative;
+  top: 265px;
+}
+.div-ftb {
+  float: left;
+  color: white;
+  margin-left: 22px;
+  /* display: table; */
+}
+.span-col1 {
+  margin-right: 10px;
+}
+.div-lst1, .div-lst2 {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+/* .div-prt, .div-cmp {
+  display: inline-block;
+  margin-right: 26px;
+  width: 50%;
+} */
+.div-prt {
+  position: absolute;
+  left: 42px;
+  top: 32px;
+}
+.div-cmp {
+  position: absolute;
+  left: 182px;
+  top: 32px;
 }

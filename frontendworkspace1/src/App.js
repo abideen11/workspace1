@@ -2,8 +2,10 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
 import Header from './Header'
+import Footer from './Footer'
+import Home from './Home'
 
 class App extends React.Component {
   state = {
@@ -27,8 +29,9 @@ class App extends React.Component {
         <div>
           <Route component={Header} />
           <Switch>
-            <Route></Route>
+            <Route exact path="/" component={Home} />
           </Switch>
+          <Route component={Footer} />
         </div>
       </BrowserRouter>
     )
