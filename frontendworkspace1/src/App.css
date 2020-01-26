@@ -53,7 +53,21 @@
 }
 .div-sea {
   float: right;
-  margin-right: 22px;
+  margin-right: 282px;
+}
+/* .div-sea2 {
+  margin-left: 12px;
+} */
+/* .form-sea {
+  margin-left: 22px;
+} */
+.div-aa {
+  position: absolute;
+  top: 36px;
+  right: 36px;
+}
+.span-aa2 {
+  margin-left: 12px;
 }
 .main-foot {
   padding: 110px;
@@ -91,7 +105,7 @@
 .div-ref {
   width: 33.33%;
   text-align: center;
-  padding: 67.5px;
+  padding: 65px;
   background-color: gray;
   color: white;
   position: absolute;
@@ -101,27 +115,27 @@
 .div-dis {
   width: 33.33%;
   text-align: center;
-  padding: 72px;
+  padding: 69.5px;
   background-color: gray;
   color: white;
   position: absolute;
-  left: 416px;
+  left: 411.25px;
   top: 1202px;
 }
 .div-awrd {
   width: 33.33%;
   text-align: center;
-  padding: 60px;
+  padding: 57.5px;
   background-color: gray;
   color: white;
   position: absolute;
-  left: 833px;
+  right: 0;
   top: 1202px;
 }
 .div-hrv {
   color: gray;
   position: relative; 
-  top: 285px;
+  top: 310px;
   height: calc(100vh - 360px);
 }
 .bum {

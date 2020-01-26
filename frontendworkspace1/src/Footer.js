@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPinterest, faInstagram, faTwitter, faFacebookF, faSnapchatGhost } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram, faTwitter, faFacebookF, faSnapchatGhost, faPinterestP } from '@fortawesome/free-brands-svg-icons'
 
 export default class Footer extends React.Component {
     render() {
@@ -30,7 +30,7 @@ export default class Footer extends React.Component {
                     <div className="div-med">
                         <div className="div-cir">
                             <div>
-                                <Link><FontAwesomeIcon icon={faPinterest} /></Link>
+                                <Link><FontAwesomeIcon icon={faPinterestP} /></Link>
                             </div>
                         </div>
                         <div className="div-cir2">
