@@ -60,27 +60,18 @@
   overflow: hidden;
   background-color: gray;
   position: relative;
-  top: 265px;
+  top: 285px;
 }
 .div-ftb {
   float: left;
   color: white;
   margin-left: 22px;
-  /* display: table; */
-}
-.span-col1 {
-  margin-right: 10px;
 }
 .div-lst1, .div-lst2 {
   list-style-type: none;
   margin: 0;
   padding: 0;
 }
-/* .div-prt, .div-cmp {
-  display: inline-block;
-  margin-right: 26px;
-  width: 50%;
-} */
 .div-prt {
   position: absolute;
   left: 42px;
@@ -91,3 +82,133 @@
   left: 182px;
   top: 32px;
 }
+.main-msg {
+  text-align: center;
+  padding: 80px;
+  overflow: hidden;
+  color: gray;
+}
+.div-ref {
+  width: 33.33%;
+  text-align: center;
+  padding: 67.5px;
+  background-color: gray;
+  color: white;
+  position: absolute;
+  left: 0;
+  top: 1202px;
+}
+.div-dis {
+  width: 33.33%;
+  text-align: center;
+  padding: 72px;
+  background-color: gray;
+  color: white;
+  position: absolute;
+  left: 416px;
+  top: 1202px;
+}
+.div-awrd {
+  width: 33.33%;
+  text-align: center;
+  padding: 60px;
+  background-color: gray;
+  color: white;
+  position: absolute;
+  left: 833px;
+  top: 1202px;
+}
+.div-hrv {
+  color: gray;
+  position: relative; 
+  top: 285px;
+  height: calc(100vh - 360px);
+}
+.bum {
+  text-align: center;
+  margin: 40px;
+}
+.bm {
+  text-align: center;
+  margin: 0 auto;
+}
+.main-fmo {
+  padding: 10px;
+  overflow: hidden;
+  background-color: black;
+  position: relative; 
+  top: 285px;
+}
+.div-fmo {
+  float: left;
+  color: white;
+  margin-left: 15px;
+}
+.span-fmo {
+  margin-right: 10px;
+}
+.div-fmo2 {
+  float: right;
+}
+.div-cir {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 22px;
+  right: 402px;
+}
+.div-cir2 {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 22px;
+  right: 352px;
+}
+.div-cir3 {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 22px;
+  right: 302px;
+}
+.div-cir4 {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 22px;
+  right: 252px;
+}
+.div-cir5 {
+  height: 40px;
+  width: 40px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 22px;
+  right: 202px;
+}
+
+

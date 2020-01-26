@@ -1,10 +1,10 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faSearch, faHandshake } from '@fortawesome/free-solid-svg-icons'
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { Link } from 'react-router-dom'
 
-library.add(faSearch)
+library.add(faSearch, faHandshake)
 
 export default class Header extends React.Component {
     render() {

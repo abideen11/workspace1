@@ -6,6 +6,7 @@ import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
 import Home from './Home'
+import FooterMore from './FooterMore'
 
 class App extends React.Component {
   state = {
@@ -32,6 +33,7 @@ class App extends React.Component {
             <Route exact path="/" component={Home} />
           </Switch>
           <Route component={Footer} />
+          <Route component={FooterMore} />
         </div>
       </BrowserRouter>
     )
