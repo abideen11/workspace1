@@ -7,6 +7,8 @@ import Header from './Header'
 import Footer from './Footer'
 import Home from './Home'
 import FooterMore from './FooterMore'
+import CarsContainer from './CarsContainer';
+import CarsContent from './CarsContent';
 
 class App extends React.Component {
   state = {
@@ -16,7 +18,7 @@ class App extends React.Component {
 
   componentDidMount() {
     fetch("http://localhost:3000/cars")
-    .then(r => r.json())
+    .then(r => r.text())
     .then(data => {
       this.setState({
         cars: data
@@ -25,12 +27,14 @@ class App extends React.Component {
   }
 
   render() {
+    console.log(this.state.cars)
     return(
       <BrowserRouter>
         <div>
           <Route component={Header} />
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route path="/cars" component={CarsContent} />
           </Switch>
           <Route component={Footer} />
           <Route component={FooterMore} />
@@ -41,3 +45,5 @@ class App extends React.Component {
 }
 
 export default App;
+
+// render={() => <CarsContainer cars={this.state.cars}/>}
