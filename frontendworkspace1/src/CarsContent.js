@@ -6,7 +6,10 @@ export default class CarsContent extends React.Component {
         return(
             <div className="div-cnt">
                 <div className="sub-cnt">
-                <Media>
+                    <div className="sub-cntimg">
+                        <img src="https://image.shutterstock.com/image-photo/boy-praying-god-stock-image-260nw-1064089271.jpg" alt="pic" />
+                    </div>
+                {/* <Media>
                     <img
                         width={64}
                         height={64}
@@ -16,7 +19,7 @@ export default class CarsContent extends React.Component {
                     />
                     <Media.Body>
                         <h5>Media Heading</h5>
-                        {/* <p>{this.props.car.make} </p> */}
+                        <p>{this.props.car.make} </p>
                         <p>
                         Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque
                         ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at,
@@ -24,7 +27,7 @@ export default class CarsContent extends React.Component {
                         Donec lacinia congue felis in faucibus.
                         </p>
                     </Media.Body>
-                </Media>
+                </Media> */}
                 </div>
             </div>
         )

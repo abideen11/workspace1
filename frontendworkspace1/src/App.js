@@ -18,7 +18,7 @@ class App extends React.Component {
 
   componentDidMount() {
     fetch("http://localhost:3000/cars")
-    .then(r => r.text())
+    .then(r => r.json())
     .then(data => {
       this.setState({
         cars: data
@@ -34,7 +34,7 @@ class App extends React.Component {
           <Route component={Header} />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/cars" component={CarsContent} />
+            <Route path="/cars" render={() => <CarsContainer cars={this.state.cars}/>} />
           </Switch>
           <Route component={Footer} />
           <Route component={FooterMore} />
@@ -46,4 +46,4 @@ class App extends React.Component {
 
 export default App;
 
-// render={() => <CarsContainer cars={this.state.cars}/>}
+
