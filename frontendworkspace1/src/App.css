@@ -38,10 +38,15 @@
 }
 
 .main-head {
-  margin: 0px;
+  /* margin: 0; */
+  z-index: 1;
   padding: 40px;
-  overflow: hidden;
+  /* overflow: hidden; */
   background-color: gray;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 .head-tb {
   float: left;
@@ -54,6 +59,22 @@
 .div-sea {
   float: right;
   margin-right: 282px;
+}
+.main-sld {
+  position: relative;
+  z-index: 0;
+}
+/* .div-sld {
+  width: 600px;
+  height: 120px;
+  position: relative;
+} */
+.sld-img {
+  width: 1220px;
+  height: 600px;
+  /* max-width: 100%; */
+  /* max-height: 900px; */
+  overflow: hidden;
 }
 .div-aa {
   position: absolute;
@@ -68,7 +89,6 @@
   overflow: hidden;
   background-color: gray;
   position: relative;
-  top: 285px;
 }
 .div-ftb {
   float: left;
@@ -93,44 +113,29 @@
 .main-msg {
   text-align: center;
   padding: 80px;
-  overflow: hidden;
+  /* overflow: hidden; */
   color: gray;
+  /* position: relative; */
+  /* top: 120px; */
+  /* height: calc(100vh - 33px); */
 }
-.div-ref {
-  width: 33.33%;
-  text-align: center;
-  padding: 65px;
+.main-srv {
+  display: grid;
+  grid-template-columns: auto auto auto;
   background-color: gray;
   color: white;
-  position: absolute;
-  left: 0;
-  top: 1202px;
+  padding: 20px;
 }
-.div-dis {
-  width: 33.33%;
+.div-srv {
   text-align: center;
-  padding: 69.5px;
-  background-color: gray;
-  color: white;
-  position: absolute;
-  left: 411.25px;
-  top: 1202px;
 }
-.div-awrd {
-  width: 33.33%;
-  text-align: center;
-  padding: 57.5px;
-  background-color: gray;
-  color: white;
-  position: absolute;
-  right: 0;
-  top: 1202px;
+.yu {
+  margin: 40px;
 }
 .div-hrv {
+  background-color: yellow;
   color: gray;
-  position: relative; 
-  top: 310px;
-  height: calc(100vh - 360px);
+  /* position: relative;  */
 }
 .bum {
   text-align: center;
@@ -146,7 +151,6 @@
   background-color: black;
   font-size: 14px;
   position: relative; 
-  top: 285px;
 }
 .div-fmo {
   float: left;
@@ -219,15 +223,38 @@
   top: 22px;
   right: 202px;
 }
-.sub-cntimg {
-  width: 150px;
-  height: 150px;
-  overflow: hidden;
+/* .sub-cnt2 {
   position: relative;
+  overflow: hidden;
+  margin-left: 190px;
+}  */
+.sub-ves {
+  width: 2px;
+  height: 2px;
 }
-.sub-cntimg img {
+.sub-ves img {
   width: 100%;
   height: auto;
 }
-
+.sub-cntimg2 {
+  width: 10px; 
+  height: 10px; 
+  overflow: hidden; 
+  /* position: relative;  */
+  /* display: inline-block;  */
+  /* margin-left: 20px;  */
+} 
+/* .sub-cntimg2 img {
+  width: 100%;
+  height: auto;
+} */
+.sub-cn {
+  /* display: block; */
+  padding: 40px;
+  width: 110px;
+  height: auto;
+  background-color: blue;
+  /* margin-left: 10px; */
+  /* margin-top: 10px; */
+}
 

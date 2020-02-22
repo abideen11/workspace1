@@ -5,7 +5,7 @@ import { faHandshake, faWheelchair, faAward } from '@fortawesome/free-solid-svg-
 export default function Service () {
     return(
         <div className="main-srv">
-            <div className="div-ref">
+            <div className="div-srv">
                 <FontAwesomeIcon icon={faHandshake} />
                 <h3>Money-back Gurantee</h3>
                 <p className="yu">
@@ -14,7 +14,7 @@ export default function Service () {
                     days the service was purchased.
                 </p>
             </div>
-            <div className="div-dis">
+            <div className="div-srv">
                 <FontAwesomeIcon icon={faWheelchair} />
                 <h3>Accessibility</h3>
                 <p className="yu">
@@ -23,13 +23,13 @@ export default function Service () {
                     will gladly show you how it works.
                 </p>
             </div>
-            <div className="div-awrd">
+            <div className="div-srv">
                 <FontAwesomeIcon icon={faAward} />
                 <h3>Exceptional Service</h3>
                 <p className="yu">
                     Award winning customer service that's always listen and resolve
                     any of your queries. Please don't hesitate to reach our Associates if
-                    you are have any questions, concerns or comments.
+                    you have any questions, concerns or comments.
                 </p>
             </div>
         </div>

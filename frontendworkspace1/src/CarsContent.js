@@ -5,10 +5,10 @@ export default class CarsContent extends React.Component {
     render() {
         return(
             <div className="div-cnt">
-                <div className="sub-cnt">
-                    <div className="sub-cntimg">
-                        <img src="https://image.shutterstock.com/image-photo/boy-praying-god-stock-image-260nw-1064089271.jpg" alt="pic" />
-                    </div>
+                <div className="sub-cnt2">
+                    <span className="sub-ves">
+                        <img src="https://c8.alamy.com/comp/EPF1YW/nun-with-handgun-isolated-on-white-EPF1YW.jpg" alt="plc" />
+                    </span>
                 {/* <Media>
                     <img
                         width={64}
