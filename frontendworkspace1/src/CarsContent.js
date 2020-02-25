@@ -7,7 +7,7 @@ export default class CarsContent extends React.Component {
             <div className="div-cnt">
                 <div className="sub-cnt2">
                     <span className="sub-ves">
-                        <img src="https://c8.alamy.com/comp/EPF1YW/nun-with-handgun-isolated-on-white-EPF1YW.jpg" alt="plc" />
+                        <img src="https://st4.depositphotos.com/13194036/21478/i/450/depositphotos_214783836-stock-photo-low-angle-view-jesus-robe.jpg" alt="plc" />
                     </span>
                 {/* <Media>
                     <img
