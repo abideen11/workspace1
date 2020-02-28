@@ -1,14 +1,44 @@
 import React from 'react';
-import { Media } from 'react-bootstrap'
+import { Media, ButtonToolbar, Button } from 'react-bootstrap'
+import { withRouter } from 'react-router-dom';
 
-export default class CarsContent extends React.Component {
+class CarsContent extends React.Component {
+    // state = {
+    //     clickCar: false
+    // }
+    // onClickCar = () => {
+    //     this.setState({
+    //         clickCar: !this.state.clickCar
+    //     })
+    // }
+    reDirectToCarForm = () => {
+        this.props.onClickedCar(this.props.car)
+        this.props.history.push('/form')
+    }
     render() {
+        console.log(this.props.clickedCar)
         return(
             <div className="div-cnt">
-                <div className="sub-cnt2">
-                    <span className="sub-ves">
-                        <img src="https://st4.depositphotos.com/13194036/21478/i/450/depositphotos_214783836-stock-photo-low-angle-view-jesus-robe.jpg" alt="plc" />
-                    </span>
+                {/* <span className="sub-ves">
+                    <img src="https://www.foleon.com/hubfs/Images/Team%20Images/sean-filidis.png" alt="plc" />
+                </span> */}
+                <form className="sub-cfrm">
+                    {/* <span className="cfrm-img">  */}
+                        <img src={this.props.car.img_url} alt="plc" />    
+                    {/* </span> */}
+                    <hr></hr>
+                    <h3>{this.props.car.year} {this.props.car.make} {this.props.car.model}</h3>
+                    <span className="cfrm-p2">Miles:  {this.props.car.miles}</span> 
+                    <span className="cfrm-p">Price:  ${this.props.car.price}</span>
+                    <span className="cfrm-btn">
+                        <ButtonToolbar>
+                            <Button variant="primary" onClick={this.reDirectToCarForm}>Book</Button>
+                        </ButtonToolbar>
+                    </span> 
+                    {/* <h5>test</h5> */}
+                    {/* <h6>test2</h6> */}
+                    {/* <span className="cfrm-div2"></span> */}
+                </form>
                 {/* <Media>
                     <img
                         width={64}
@@ -28,8 +58,14 @@ export default class CarsContent extends React.Component {
                         </p>
                     </Media.Body>
                 </Media> */}
-                </div>
+                {/* <div>
+                    <span>
+                        <img src="https://www.foleon.com/hubfs/Images/Team%20Images/sean-filidis.png" alt="plc" />
+                    </span>
+                </div> */}
             </div>
         )
     }
 }
+
+export default withRouter(CarsContent)

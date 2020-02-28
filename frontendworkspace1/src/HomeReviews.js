@@ -10,7 +10,7 @@ export default function HomeReviews () {
                 <Carousel.Item>
         
                     <div className="bum">
-                    <h3>"Awesome Product! Awesome people!"</h3>
+                    <h3>"Awesome product! Awesome people!"</h3>
                     <p>Joanne, Richmond, VA</p>
                     </div>
                 </Carousel.Item>
@@ -26,7 +26,7 @@ export default function HomeReviews () {
                     {/* <Carousel.Caption> */}
                     <div className="bum">
                     {/* Third slide label */}
-                    <h3>"The best car rental service."</h3>
+                    <h3>"The best car rental service, period."</h3>
                     {/* <p></p> */}
                     <p>Damian, Newark, NJ</p>
                     </div>

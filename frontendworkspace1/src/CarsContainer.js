@@ -1,16 +1,14 @@
 import React from 'react';
 import CarsContent from './CarsContent';
 // import { BrowserRouter, Route } from 'react-router-dom';
+import { GridList, GridListTile } from '@material-ui/core'
 
 export default class CarsContainer extends React.Component {
     render() {
         return(
             <div className="div-cn">
-                {/* <span className="sub-cn"></span> */}
                 <div className="sub-cn">
-                    {/* <h1>Testing</h1> */}
                     <h3 className="h-ctg">Category:</h3>
-                    {/* <div className="div-ctg"> */}
                     <select className="sel-ctg">
                         <option className="all">Please select a category</option>
                         <option className="coupe">Coupe</option>
@@ -20,7 +18,6 @@ export default class CarsContainer extends React.Component {
                         <option className="van">Van</option>
                         <option className="crossover">Crossover</option>
                     </select>
-                    {/* </div> */}
                     <h3 className="h-yr">Year:</h3>
                     <select className="sel-yr">
                         <option className="select">Please select a year</option>
@@ -63,7 +60,9 @@ export default class CarsContainer extends React.Component {
                     </select>
                 </div>
                 <div className="sub-cn2">
-                    {this.props.cars.map(car => <CarsContent car={car} />)}
+                    {this.props.cars.map(car => <CarsContent car={car} onClickedCar={this.props.onClickedCar} />)}
+                    {/* {this.props.firstColArray.map(car1 => <CarsContent car1={car1} /> )} */}
+                    {/* <CarsContent car={car} /> */}
                 </div>
             </div>
             // <BrowserRouter>

@@ -13,8 +13,8 @@ export default function Slides () {
                         alt="First slide"
                         />
                         <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                        <h3>Out N' About</h3>
+                        <p>Explore new horizons while discovering new sceneries.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -25,8 +25,8 @@ export default function Slides () {
                         />
 
                         <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                        <h3>Bask in Luxury</h3>
+                        <p>Leather cushion seats, longer legroom, surround sound plus more plushness.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                     <Carousel.Item>
@@ -37,8 +37,8 @@ export default function Slides () {
                         />
 
                         <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                        <h3>Blaze the trail</h3>
+                        <p>We definitely give NASCAR and F1 a run for their money with our fleet.</p>
                         </Carousel.Caption>
                     </Carousel.Item>
                 </Carousel>
