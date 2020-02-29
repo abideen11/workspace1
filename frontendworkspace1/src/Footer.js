@@ -1,9 +1,12 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link, withRouter } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faTwitter, faFacebookF, faSnapchatGhost, faPinterestP } from '@fortawesome/free-brands-svg-icons'
 
-export default class Footer extends React.Component {
+class Footer extends React.Component {
+    reDirectToTemporary = () => {
+        this.props.history.push('/temporary')
+    }
     render() {
         return(
             <div className="main-foot">
@@ -15,7 +18,7 @@ export default class Footer extends React.Component {
                             <li>Audi</li>
                             <li>Bentley</li>
                             <li>BMW</li>
-                            <li><Link>See more</Link></li>
+                            <li><Link onClick={this.reDirectToTemporary}>See more</Link></li>
                         </ul>
                     </div>
                     <div className="div-cmp">
@@ -59,3 +62,5 @@ export default class Footer extends React.Component {
         )
     }
 }
+
+export default withRouter(Footer) 

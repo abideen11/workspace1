@@ -11,6 +11,8 @@ import CarsContainer from './CarsContainer';
 import CarsContent from './CarsContent';
 import CarsForm from './CarsForm'
 import Error from './Error';
+import Review from './Review';
+import Temporary from './Temporary';
 
 class App extends React.Component {
   state = {
@@ -54,6 +56,8 @@ class App extends React.Component {
             <Route exact path="/" component={Home} />
             <Route path="/cars" render={() => <CarsContainer cars={this.state.cars} onClickedCar={this.onClickedCar}/>} />
             <Route path="/form" render={() => <CarsForm clickedCar={this.state.clickedCar}/>} />
+            <Route path="/review" component={Review} />
+            <Route path="/temporary" component={Temporary} />
             <Route path="*" component={Error} />
           </Switch>
           <Route component={Footer} />
