@@ -56,9 +56,17 @@
   color: white;
   margin-left: 22px;
 }
-.span-f, .span-s, .span-t {
+.span-f, .span-t, .span-fo {
   margin-right: 10px;
 }
+/* .span-f:visited, .span-f:link, .span-f:active, .span-t:visited,
+.span-t:link, .span-t:active, .span-fo:visited, .span-fo:link,
+.span-fo:active {
+  text-decoration: none;
+} */
+/* .span-f, .span-s, .span-t {
+  margin-right: 10px;
+} */
 .div-sea {
   float: right;
   margin-right: 282px;

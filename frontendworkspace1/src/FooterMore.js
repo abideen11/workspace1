@@ -1,19 +1,27 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCopyright } from '@fortawesome/free-regular-svg-icons'
+import { withRouter, Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCopyright } from '@fortawesome/free-regular-svg-icons';
 
-export default function FooterMore () {
-    return(
-        <div className="main-fmo">
-            <div className="div-fmo">
-                <span className="span-fmo">Terms of Service</span>
-                <span className="span-fmo">Privacy Policy</span>
-                <span className="span-fmo">Ad Choice</span>
-                <span className="span-fmo">Site Map</span>
+class FooterMore extends React.Component {
+    reDirectToTemporary = () => {
+        this.props.history.push('/temporary')
+    }
+    render() {
+        return(
+            <div className="main-fmo">
+                <div className="div-fmo">
+                    <span className="span-fmo"><Link style={{ color: 'inherit', textDecoration: 'none' }} onClick={this.reDirectToTemporary}>Terms of Service</Link></span>
+                    <span className="span-fmo"><Link style={{ color: 'inherit', textDecoration: 'none' }} onClick={this.reDirectToTemporary}>Privacy Policy</Link></span>
+                    <span className="span-fmo"><Link style={{ color: 'inherit', textDecoration: 'none' }} onClick={this.reDirectToTemporary}>Ad Choice</Link></span>
+                    <span className="span-fmo"><Link style={{ color: 'inherit', textDecoration: 'none' }} onClick={this.reDirectToTemporary}>Site Map</Link></span>
+                </div>
+                <div className="div-fmo2">
+                    <p><FontAwesomeIcon icon={faCopyright} /> 2020 Business.com. All rights reserved.</p>
+                </div>
             </div>
-            <div className="div-fmo2"> 
-                <p><FontAwesomeIcon icon={faCopyright} /> 2020 Business.com. All rights reserved.</p>
-            </div>
-        </div>
-    )
+        )
+    }
 }
+
+export default withRouter(FooterMore)

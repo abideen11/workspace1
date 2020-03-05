@@ -18,7 +18,7 @@ class Footer extends React.Component {
                             <li>Audi</li>
                             <li>Bentley</li>
                             <li>BMW</li>
-                            <li><Link onClick={this.reDirectToTemporary}>See more</Link></li>
+                            <li><Link style={{ textDecoration: 'none' }} onClick={this.reDirectToTemporary}>See more</Link></li>
                         </ul>
                     </div>
                     <div className="div-cmp">
@@ -27,33 +27,33 @@ class Footer extends React.Component {
                             <li>About</li>
                             <li>Contact</li>
                             <li>Careers</li>
-                            <li>Become a Partner</li>
+                            <li><Link style={{ textDecoration: 'none' }} onClick={this.reDirectToTemporary}>Become a Partner</Link></li>
                         </ul>
                     </div>
                     <div className="div-med">
                         <div className="div-cir">
                             <div>
-                                <Link><FontAwesomeIcon icon={faPinterestP} /></Link>
+                                <Link style={{ textDecoration: 'none' }}><FontAwesomeIcon icon={faPinterestP} /></Link>
                             </div>
                         </div>
                         <div className="div-cir2">
                             <div>
-                                <Link><FontAwesomeIcon icon={faInstagram} /></Link>
+                                <Link style={{ textDecoration: 'none' }}><FontAwesomeIcon icon={faInstagram} /></Link>
                             </div>
                         </div>
                         <div className="div-cir3">
                             <div>
-                                <Link><FontAwesomeIcon icon={faTwitter} /></Link>
+                                <Link style={{ textDecoration: 'none' }}><FontAwesomeIcon icon={faTwitter} /></Link>
                             </div>
                         </div>
                         <div className="div-cir4">
                             <div>
-                                <Link><FontAwesomeIcon icon={faFacebookF} /></Link>
+                                <Link style={{ textDecoration: 'none' }}><FontAwesomeIcon icon={faFacebookF} /></Link>
                             </div>
                         </div>
                         <div className="div-cir5">
                             <div>
-                                <Link><FontAwesomeIcon icon={faSnapchatGhost} /></Link>
+                                <Link style={{ textDecoration: 'none' }}><FontAwesomeIcon icon={faSnapchatGhost} /></Link>
                             </div>
                         </div>
                     </div>

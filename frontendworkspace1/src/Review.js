@@ -31,7 +31,7 @@ export default function Review () {
                         <Form.Control placeholder="Apartment, studio, or floor" />
                     </Form.Group>
                     <Form.Group controlId="reviewNumber">
-                        <Form.Label>Please rating your experience</Form.Label>
+                        <Form.Label>Please rate your experience</Form.Label>
                         <Form.Control as="select" multiple>
                             <option>1</option>
                             <option>2</option>

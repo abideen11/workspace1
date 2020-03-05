@@ -14,9 +14,10 @@ class Header extends React.Component {
                 {/* onClick */}
                 {/* onSubmit */}
                 <div className="head-tb">
-                    <span className="span-f"><Link to="/">Home</Link></span>
-                    <span className="span-t"><Link to="/cars">Cars</Link></span>
-                    <span className="span-fo"><Link to="/review">Write a review</Link></span>
+                    <a></a>
+                    <span className="span-f"><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Home</Link></span>
+                    <span className="span-t"><Link to="/cars" style={{ color: 'inherit', textDecoration: 'none' }}>Cars</Link></span>
+                    <span className="span-fo"><Link to="/review" style={{ color: 'inherit', textDecoration: 'none' }}>Write a review</Link></span>
                 </div>
                 <div className="div-sea">
                     <form className="form-sea">
