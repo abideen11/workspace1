@@ -33,27 +33,27 @@ class Footer extends React.Component {
                     <div className="div-med">
                         <div className="div-cir">
                             <div>
-                                <Link style={{ textDecoration: 'none' }}><FontAwesomeIcon icon={faPinterestP} /></Link>
+                                <Link style={{ textDecoration: 'none' }} onClick={this.reDirectToTemporary}><FontAwesomeIcon icon={faPinterestP} /></Link>
                             </div>
                         </div>
                         <div className="div-cir2">
                             <div>
-                                <Link style={{ textDecoration: 'none' }}><FontAwesomeIcon icon={faInstagram} /></Link>
+                                <Link style={{ textDecoration: 'none' }} onClick={this.reDirectToTemporary}><FontAwesomeIcon icon={faInstagram} /></Link>
                             </div>
                         </div>
                         <div className="div-cir3">
                             <div>
-                                <Link style={{ textDecoration: 'none' }}><FontAwesomeIcon icon={faTwitter} /></Link>
+                                <Link style={{ textDecoration: 'none' }} onClick={this.reDirectToTemporary}><FontAwesomeIcon icon={faTwitter} /></Link>
                             </div>
                         </div>
                         <div className="div-cir4">
                             <div>
-                                <Link style={{ textDecoration: 'none' }}><FontAwesomeIcon icon={faFacebookF} /></Link>
+                                <Link style={{ textDecoration: 'none' }} onClick={this.reDirectToTemporary}><FontAwesomeIcon icon={faFacebookF} /></Link>
                             </div>
                         </div>
                         <div className="div-cir5">
                             <div>
-                                <Link style={{ textDecoration: 'none' }}><FontAwesomeIcon icon={faSnapchatGhost} /></Link>
+                                <Link style={{ textDecoration: 'none' }} onClick={this.reDirectToTemporary}><FontAwesomeIcon icon={faSnapchatGhost} /></Link>
                             </div>
                         </div>
                     </div>
