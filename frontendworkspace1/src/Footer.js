@@ -14,46 +14,46 @@ class Footer extends React.Component {
                     <div className="div-prt">
                         <h4 className="head-one">Partners</h4>
                         <ul className="div-lst1">
-                            <li>Acura</li>
-                            <li>Audi</li>
-                            <li>Bentley</li>
-                            <li>BMW</li>
-                            <li><Link style={{ textDecoration: 'none' }} onClick={this.reDirectToTemporary}>See more</Link></li>
+                            <li><Link style={{ color: 'inherit', textDecoration: 'none' }} onClick={this.reDirectToTemporary}>Acura</Link></li>
+                            <li><Link style={{ color: 'inherit', textDecoration: 'none' }} onClick={this.reDirectToTemporary}>Audi</Link></li>
+                            <li><Link style={{ color: 'inherit', textDecoration: 'none' }} onClick={this.reDirectToTemporary}>Bentley</Link></li>
+                            <li><Link style={{ color: 'inherit', textDecoration: 'none' }} onClick={this.reDirectToTemporary}>BMW</Link></li>
+                            <li><Link style={{ color: 'inherit', textDecoration: 'none' }} onClick={this.reDirectToTemporary}>See more</Link></li>
                         </ul>
                     </div>
                     <div className="div-cmp">
                         <h4 className="head-two">Company</h4>
                         <ul className="div-lst2">
-                            <li>About</li>
-                            <li>Contact</li>
-                            <li>Careers</li>
-                            <li><Link style={{ textDecoration: 'none' }} onClick={this.reDirectToTemporary}>Become a Partner</Link></li>
+                            <li><Link style={{ color: 'inherit', textDecoration: 'none' }} onClick={this.reDirectToTemporary}>About</Link></li>
+                            <li><Link style={{ color: 'inherit', textDecoration: 'none' }} onClick={this.reDirectToTemporary}>Contact</Link></li>
+                            <li><Link style={{ color: 'inherit', textDecoration: 'none' }} onClick={this.reDirectToTemporary}>Careers</Link></li>
+                            <li><Link style={{ color: 'inherit', textDecoration: 'none' }} onClick={this.reDirectToTemporary}>Become a Partner</Link></li>
                         </ul>
                     </div>
                     <div className="div-med">
                         <div className="div-cir">
                             <div>
-                                <Link style={{ textDecoration: 'none' }} onClick={this.reDirectToTemporary}><FontAwesomeIcon icon={faPinterestP} /></Link>
+                                <Link style={{ color: 'inherit', textDecoration: 'none' }} onClick={this.reDirectToTemporary}><FontAwesomeIcon icon={faPinterestP} /></Link>
                             </div>
                         </div>
                         <div className="div-cir2">
                             <div>
-                                <Link style={{ textDecoration: 'none' }} onClick={this.reDirectToTemporary}><FontAwesomeIcon icon={faInstagram} /></Link>
+                                <Link style={{ color: 'inherit', textDecoration: 'none' }} onClick={this.reDirectToTemporary}><FontAwesomeIcon icon={faInstagram} /></Link>
                             </div>
                         </div>
                         <div className="div-cir3">
                             <div>
-                                <Link style={{ textDecoration: 'none' }} onClick={this.reDirectToTemporary}><FontAwesomeIcon icon={faTwitter} /></Link>
+                                <Link style={{ color: 'inherit', textDecoration: 'none' }} onClick={this.reDirectToTemporary}><FontAwesomeIcon icon={faTwitter} /></Link>
                             </div>
                         </div>
                         <div className="div-cir4">
                             <div>
-                                <Link style={{ textDecoration: 'none' }} onClick={this.reDirectToTemporary}><FontAwesomeIcon icon={faFacebookF} /></Link>
+                                <Link style={{ color: 'inherit', textDecoration: 'none' }} onClick={this.reDirectToTemporary}><FontAwesomeIcon icon={faFacebookF} /></Link>
                             </div>
                         </div>
                         <div className="div-cir5">
                             <div>
-                                <Link style={{ textDecoration: 'none' }} onClick={this.reDirectToTemporary}><FontAwesomeIcon icon={faSnapchatGhost} /></Link>
+                                <Link style={{ color: 'inherit', textDecoration: 'none' }} onClick={this.reDirectToTemporary}><FontAwesomeIcon icon={faSnapchatGhost} /></Link>
                             </div>
                         </div>
                     </div>

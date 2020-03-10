@@ -37,7 +37,7 @@ export default function Slides () {
                         />
 
                         <Carousel.Caption>
-                        <h3>Blaze the trail</h3>
+                        <h3>Blaze the Trail</h3>
                         <p>We definitely give NASCAR and F1 a run for their money with our fleet.</p>
                         </Carousel.Caption>
                     </Carousel.Item>

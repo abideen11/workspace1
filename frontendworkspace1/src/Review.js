@@ -46,25 +46,6 @@ export default function Review () {
                     </Form.Group>
                 </Form>
             </div>
-            {/* <h1>Testing</h1> */}
-            {/* <ion-icon name="star-outline"></ion-icon> */}
-            {/* <a className="star-outline"></a> */}
-            {/* <span className="sub-rvw stars-80">★★★★★</span> */}
-            {/* <div className="sub-rvw">
-            </div> */}
-            {/* <fieldset className="sub-rvw"> */}
-                {/* <input type="radio" id="star5" name="rating" value="5" />
-                <label className="full" for="star5" title="Awesome"><FontAwesomeIcon icon={faStar} /></label>
-                <input type="radio" id="star4" name="rating" value="4" />
-                <label className="full" for="star4" title="Pretty good"><FontAwesomeIcon icon={faStar} /></label>
-                <input type="radio" id="star3" name="rating" value="3" />
-                <label className="full" for="star3" title="Kinda bad"><FontAwesomeIcon icon={faStar} /></label>
-                <input type="radio" id="star2" name="rating" value="2" />
-                <label className="full" for="star2" title="Meh"><FontAwesomeIcon icon={faStar} /></label>
-                <input type="radio" id="star1" name="rating" value="1" />
-                <label className="full" for="star1" title="Sucks big time"><FontAwesomeIcon icon={faStar} /></label> */}
-                {/* <FontAwesomeIcon icon={faStar} /> */}
-            {/* </fieldset> */}
         </div>
     )
 }

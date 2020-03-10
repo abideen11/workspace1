@@ -11,8 +11,6 @@ class Header extends React.Component {
     render() {
         return(
             <div className="main-head">
-                {/* onClick */}
-                {/* onSubmit */}
                 <div className="head-tb">
                     <a></a>
                     <span className="span-f"><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Home</Link></span>

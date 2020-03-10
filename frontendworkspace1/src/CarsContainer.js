@@ -1,6 +1,5 @@
 import React from 'react';
 import CarsContent from './CarsContent';
-// import { BrowserRouter, Route } from 'react-router-dom';
 import { GridList, GridListTile } from '@material-ui/core'
 
 export default class CarsContainer extends React.Component {
@@ -65,9 +64,6 @@ export default class CarsContainer extends React.Component {
                     {/* <CarsContent car={car} /> */}
                 </div>
             </div>
-            // <BrowserRouter>
-            //     <Route />
-            // </BrowserRouter>
         )
     }
 }

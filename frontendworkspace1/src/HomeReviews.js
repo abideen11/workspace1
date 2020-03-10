@@ -5,7 +5,6 @@ export default function HomeReviews () {
     return(
         <div className="div-hrv">
             <h1 className="bm">Testimonials</h1>
-            {/* <div className="bum"> */}
             <Carousel>
                 <Carousel.Item>
         
@@ -23,14 +22,10 @@ export default function HomeReviews () {
                 </Carousel.Item>
                 <Carousel.Item>
    
-                    {/* <Carousel.Caption> */}
                     <div className="bum">
-                    {/* Third slide label */}
                     <h3>"The best car rental service, period."</h3>
-                    {/* <p></p> */}
                     <p>Damian, Newark, NJ</p>
                     </div>
-                    {/* </Carousel.Caption> */}
                 </Carousel.Item>
             </Carousel>
             {/* </div> */}
