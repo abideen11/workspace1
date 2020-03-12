@@ -18,8 +18,11 @@ class App extends React.Component {
   state = {
     user: {},
     cars: [],
+    carsArray: [],
+    carsArrayYear: [],
     firstColArray: [],
     secondColArray: [],
+    filterCar: [],
     clickedCar: null 
   }
 
@@ -29,6 +32,7 @@ class App extends React.Component {
     .then(data => {
       this.setState({
         cars: data,
+        carsArray: data
       })
     })
   }
@@ -39,6 +43,42 @@ class App extends React.Component {
   //   })
   // }
 
+  firstCol = () => {
+    this.setState({
+      firstColArray: this.state.carsArray.slice(this.state.carsArray.length/2)
+    })
+  }
+
+  onFilterCar = (e) => {
+    if(e === "Please select a category" || e === "Please select a year" || e === "Please choose a range") {
+      this.setState({
+        carsArray: this.state.cars  
+      })
+    }
+    else {
+      if(e === "Sedan" || e === "Coupe" || e === "SUV" || e === "Truck" || e === "Van" || e === "Crossover") {
+        this.setState({
+          carsArray: this.state.cars.filter(aCar => aCar.category === e)
+        })
+      }
+      if(e === "2008" || e === "2010" || e === "2012" || e === "2014" || e === "2015" || e === "2017" || e === "2020") {
+        this.setState({
+          carsArray: this.state.cars.filter(aCar => aCar.year === parseInt(e))
+        })
+      }
+      if(e === "50000" || e === "100000" || e === "150000") {
+        this.setState({
+          carsArray: this.state.cars.filter(aCar => (aCar.miles <= parseInt(e) && aCar.miles >= (parseInt(e)-50000)) )
+        })
+      }
+      if(e === "200" || e === "400" || e === "600") {
+        this.setState({
+          carsArray: this.state.cars.filter(aCar => (aCar.price <= parseInt(e) && aCar.price >= (parseInt(e)-200)) )
+        })
+      }
+    }
+  }
+
   onClickedCar = (car) => {
     this.setState({
       clickedCar: car
@@ -47,14 +87,17 @@ class App extends React.Component {
 
   render() {
     console.log(this.state.cars)
-    // console.log(this.state.firstColArray)
+    console.log(this.state.firstColArray)
+    console.log(this.state.carsArray.slice(this.state.carsArray.length/2))
+    console.log(this.state.carsArray)
+    console.log(this.state.cars) 
     return(
       <BrowserRouter>
         <div>
           <Route component={Header} />
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/cars" render={() => <CarsContainer cars={this.state.cars} onClickedCar={this.onClickedCar}/>} />
+            <Route path="/cars" render={() => <CarsContainer carsArray={this.state.carsArray} onFilterCar={this.onFilterCar} onClickedCar={this.onClickedCar}/>} />
             <Route path="/form" render={() => <CarsForm clickedCar={this.state.clickedCar}/>} />
             <Route path="/review" component={Review} />
             <Route path="/temporary" component={Temporary} />
