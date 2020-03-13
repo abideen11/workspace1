@@ -8,7 +8,7 @@ class CarsContent extends React.Component {
         this.props.history.push('/form')
     }
     render() {
-        console.log(this.props.clickedCar)
+        console.log(this.props.onClickedCar)
         return(
             <div className="div-cnt">
                 <form className="sub-cfrm">
