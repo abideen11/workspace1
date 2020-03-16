@@ -13,6 +13,8 @@ import CarsForm from './CarsForm'
 import Error from './Error';
 import Review from './Review';
 import Temporary from './Temporary';
+import LogIn from './LogIn';
+import Register from './Register';
 
 class App extends React.Component {
   state = {
@@ -99,6 +101,8 @@ class App extends React.Component {
             <Route exact path="/" component={Home} />
             <Route path="/cars" render={() => <CarsContainer carsArray={this.state.carsArray} onFilterCar={this.onFilterCar} onClickedCar={this.onClickedCar}/>} />
             <Route path="/form" render={() => <CarsForm clickedCar={this.state.clickedCar}/>} />
+            <Route path="/login" component={LogIn} />
+            <Route path="/register" component={Register} />
             <Route path="/review" component={Review} />
             <Route path="/temporary" component={Temporary} />
             <Route path="*" component={Error} />

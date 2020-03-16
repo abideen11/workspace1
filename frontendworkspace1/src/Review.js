@@ -14,7 +14,7 @@ export default class Review extends React.Component {
     }
     render() { 
         return(
-            this.state.reviewSubmitted ? <div className="div-subrvw">Thank you for your review. It really helps us improve.</div> :
+            this.state.reviewSubmitted ? <div className="div-subrvw">Thank you for your review. It will helps us improve our service.</div> :
             <div className="div-rvw">
                 <div>
                     <Form>
