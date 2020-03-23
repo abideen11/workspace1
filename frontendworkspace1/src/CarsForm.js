@@ -12,14 +12,16 @@ class CarsForm extends React.Component {
         })
     }
     render() {
+        // style={{ textAlign: "center" }}
         return(
             this.state.filledForm ? <div className="div-rsv">Thank your for your reservation</div> :
             <div className="div-frm">
                 <h1>{this.props.clickedCar.year} {this.props.clickedCar.make} {this.props.clickedCar.model}</h1>
-                <div className="s-frm" style={{ textAlign: "center" }}>
-                    <ButtonToolbar style={{textAlign: "center"}}>
-                        <Button variant="primary" onClick={this.onFilledForm}>Submit</Button>
-                    </ButtonToolbar>
+                <div className="s-frm">
+                    {/* <ButtonToolbar>
+                        <Button variant="primary" style={{textAlign: "center"}} onClick={this.onFilledForm}>Submit</Button>
+                    </ButtonToolbar> */}
+                    <button className="frm-sbm" onClick={this.onFilledForm}>Submit</button>
                 </div>
             </div>
         )

@@ -331,6 +331,12 @@
 /* .s-frm {
   text-align: center;
 } */
+.frm-sbm {
+  /* color: blue; */
+  padding: 10px 10px;
+  background-color: blue;
+  border: none;
+}
 .div-tmp {
   padding: 20px;
   width: 100%;

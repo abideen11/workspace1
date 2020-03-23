@@ -33,12 +33,14 @@ export default class Register extends React.Component {
                 <form>
                     <label>Username or Email Address</label>{" "}
                     <input name="username" placeholder="Username or Email" type="username"></input>
-                    <br></br>
+                    <br />
                     <label>Password</label>{" "}
                     <input name="password" placeholder="Password" type="password"></input>
-                    <br></br>
+                    <br />
                     <label>Confirm Password</label>{" "}
                     <input name="confirmpassword" placeholder="Confirm Password" type="password"></input>
+                    <br />
+                    <input type="submit" />
                 </form>
             </div>
         )

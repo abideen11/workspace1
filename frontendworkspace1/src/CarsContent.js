@@ -21,7 +21,7 @@ class CarsContent extends React.Component {
                     <span className="cfrm-p">Price:  ${this.props.car.price}</span>
                     <span className="cfrm-btn">
                         <ButtonToolbar>
-                            <Button variant="primary" onClick={this.reDirectToCarForm}>Book</Button>
+                            <Button variant="primary" onClick={this.reDirectToCarForm}>Select</Button>
                         </ButtonToolbar>
                     </span> 
                 </form>
