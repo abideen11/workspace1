@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
 import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
@@ -90,7 +89,7 @@ class App extends React.Component {
       clickedCar: car
     })
   }
-  // e.includes(this.state.cars.make) || e.includes(this.state.cars.model) ? 
+
   onSearch = (e) => {
     this.setState({aux: e})
     this.setState({searchCar: []})
@@ -99,18 +98,27 @@ class App extends React.Component {
         this.setState({
           searchCar: this.state.cars.filter(i => i.make.toLowerCase() === e.toLowerCase())
         })
-      }}
+      }
+      else {
+        if(i.model.toLowerCase() === e.toLowerCase()) {
+          this.setState({
+            searchCar: this.state.cars.filter(i => i.model.toLowerCase() === e.toLowerCase())
+          })
+        }
+        if(i.category.toLowerCase() === e.toLowerCase()) {
+          this.setState({
+            searchCar: this.state.cars.filter(i => i.category.toLowerCase() === e.toLowerCase())
+          })
+        }
+        if(i.year === parseInt(e)) {
+          this.setState({
+            searchCar: this.state.cars.filter(i => i.year === parseInt(e))
+          })
+        }
+      }
+    }
     )
-    // if(e === this.state.cars.make) {
-    // this.setState({
-    //   searchCar: this.state.cars.filter(i => i.make === e)
-    // })
-    // }
-    // if(e.includes(this.state.cars.model)) {
-    //   this.setState({
-    //     searchCar: this.state.cars.filter(i => i.model === e)
-    //   })
-    // }
+    
   }
   render() {
     console.log(this.state.cars)
@@ -119,7 +127,6 @@ class App extends React.Component {
     console.log(this.state.carsArray)
     console.log(this.state.aux)
     console.log(this.state.searchCar) 
-    // component={Header}
     return(
       <BrowserRouter>
         <div>

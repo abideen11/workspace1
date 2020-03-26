@@ -30,7 +30,7 @@ class Header extends React.Component {
                 </div>
                 <div className="div-sea">
                     <form className="form-sea">
-                        <input type="text" value={this.props.value} onChange={(e) => this.props.onSearch(e.target.value)} placeholder={"Look for a car..."} />
+                        <input type="text" value={this.props.value} onChange={(e) => this.props.onSearch(e.target.value)} placeholder={"Search by make, model, year..."} />
                         <button><Link to="/search" style={{ color: 'inherit', textDecoration: 'none' }}><FontAwesomeIcon icon={faSearch} /></Link></button>
                     </form>   
                 </div>

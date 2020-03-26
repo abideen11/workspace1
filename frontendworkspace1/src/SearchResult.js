@@ -12,7 +12,7 @@ class SearchResult extends React.Component {
         return(
             <div className="div-srs">
                 <form className="sub-cfrm">
-                    {/* <img className="cfrm-img2" src={this.props.aCar.img_url} alt="plc" /> */}
+                    <img className="cfrm-img" src={this.props.aCar.img_url} alt="plc" />
                     <hr />
                     <h3>{this.props.aCar.year} {this.props.aCar.make}  {this.props.aCar.model}</h3>
                     <span className="cfrm-p2">Miles: {this.props.aCar.miles}</span>
