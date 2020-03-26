@@ -4,16 +4,28 @@ export default class Register extends React.Component {
     state = {
         username: "",
         password: "",
-        confirmPassword: ""
+        confirmPassword: "",
+        hasRegistered: false
+    }
+    handleChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value 
+        })
+    }
+    onHasRegistered = () => {
+        this.setState({
+            hasRegistered: !this.state.hasRegistered
+        })
     }
     login = (e) => {
         e.preventDefault()
-        fetch("", {
+        fetch("http://localhost:3000/users", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
+                // password_confirmation
                 user: {
                     username: this.state.username,
                     password: this.state.password,
@@ -24,21 +36,23 @@ export default class Register extends React.Component {
         .then(r => r.json())
         .then(newUser => {
             console.log(newUser)
+            this.onHasRegistered()
         })
     }
     render() {
         return(
+            this.state.hasRegistered ? <div className="ret-reg">Thank you for registering</div> :
             <div className="div-reg">
                 <h2>Register</h2>
-                <form>
+                <form onSubmit={(e) => this.login(e)}>
                     <label>Username or Email Address</label>{" "}
-                    <input name="username" placeholder="Username or Email" type="username"></input>
+                    <input onChange={this.handleChange} name="username" placeholder="Username or Email" type="username"></input>
                     <br />
                     <label>Password</label>{" "}
-                    <input name="password" placeholder="Password" type="password"></input>
+                    <input onChange={this.handleChange} name="password" placeholder="Password" type="password"></input>
                     <br />
                     <label>Confirm Password</label>{" "}
-                    <input name="confirmpassword" placeholder="Confirm Password" type="password"></input>
+                    <input onChange={this.handleChange} name="confirmPassword" placeholder="Confirm Password" type="password"></input>
                     <br />
                     <input type="submit" />
                 </form>

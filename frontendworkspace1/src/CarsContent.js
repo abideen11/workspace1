@@ -13,9 +13,9 @@ class CarsContent extends React.Component {
             <div className="div-cnt">
                 <form className="sub-cfrm">
                     {/* <span className="cfrm-img">  */}
-                        <img src={this.props.car.img_url} alt="plc" />    
+                        <img className="cfrm-img" src={this.props.car.img_url} alt="plc" />    
                     {/* </span> */}
-                    <hr></hr>
+                    <hr />
                     <h3>{this.props.car.year} {this.props.car.make} {this.props.car.model}</h3>
                     <span className="cfrm-p2">Miles:  {this.props.car.miles}</span> 
                     <span className="cfrm-p">Price:  ${this.props.car.price}</span>

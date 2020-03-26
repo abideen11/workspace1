@@ -1,9 +1,14 @@
 import React from 'react';
 
 export default class LogIn extends React.Component {
+    handleChange = (e) => {
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
     login = (e) => {
         e.preventDefault()
-        fetch("", {
+        fetch("http://localhost:3000/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -17,6 +22,9 @@ export default class LogIn extends React.Component {
         })
         .then(r => r.json())
         .then(data => {
+            localStorage.token = data.token 
+            localStorage.id = data.id 
+            this.props.history.push('/')
             console.log(data)
         })
     }
@@ -27,10 +35,10 @@ export default class LogIn extends React.Component {
                 <h2>Log In</h2>
                 <form>
                     <label>Username or Email Address</label>{" "}
-                    <input name="username" placeholder="Username or Email" type="username"></input>
+                    <input onChange={this.handleChange} name="username" placeholder="Username or Email" type="username"></input>
                     <br />
                     <label>Password</label>{" "}
-                    <input name="password" placeholder="Password" type="password"></input>
+                    <input onChange={this.handleChange} name="password" placeholder="Password" type="password"></input>
                     <br />
                     <input type="submit" />
                 </form>

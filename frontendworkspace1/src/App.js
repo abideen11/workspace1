@@ -15,6 +15,7 @@ import Review from './Review';
 import Temporary from './Temporary';
 import LogIn from './LogIn';
 import Register from './Register';
+import Search from './Search'
 
 class App extends React.Component {
   state = {
@@ -25,7 +26,10 @@ class App extends React.Component {
     firstColArray: [],
     secondColArray: [],
     filterCar: [],
-    clickedCar: null 
+    searchCar: [],
+    clickedCar: null,
+    eArray: null,
+    aux: null 
   }
 
   componentDidMount() {
@@ -86,24 +90,48 @@ class App extends React.Component {
       clickedCar: car
     })
   }
-
+  // e.includes(this.state.cars.make) || e.includes(this.state.cars.model) ? 
+  onSearch = (e) => {
+    this.setState({aux: e})
+    this.setState({searchCar: []})
+    this.state.cars.map(
+      i => {if(i.make.toLowerCase() === e.toLowerCase()) {
+        this.setState({
+          searchCar: this.state.cars.filter(i => i.make.toLowerCase() === e.toLowerCase())
+        })
+      }}
+    )
+    // if(e === this.state.cars.make) {
+    // this.setState({
+    //   searchCar: this.state.cars.filter(i => i.make === e)
+    // })
+    // }
+    // if(e.includes(this.state.cars.model)) {
+    //   this.setState({
+    //     searchCar: this.state.cars.filter(i => i.model === e)
+    //   })
+    // }
+  }
   render() {
     console.log(this.state.cars)
     console.log(this.state.firstColArray)
-    console.log(this.state.carsArray.slice(this.state.carsArray.length/2))
+    // console.log(this.state.carsArray.slice(this.state.carsArray.length/2))
     console.log(this.state.carsArray)
-    console.log(this.state.cars) 
+    console.log(this.state.aux)
+    console.log(this.state.searchCar) 
+    // component={Header}
     return(
       <BrowserRouter>
         <div>
-          <Route component={Header} />
+          <Route render={() => <Header onSearch={this.onSearch} />} /> 
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/cars" render={() => <CarsContainer carsArray={this.state.carsArray} onFilterCar={this.onFilterCar} onClickedCar={this.onClickedCar}/>} />
+            <Route path="/cars" render={() => <CarsContainer carsArray={this.state.carsArray} onFilterCar={this.onFilterCar} onClickedCar={this.onClickedCar} />} />
             <Route path="/form" render={() => <CarsForm clickedCar={this.state.clickedCar}/>} />
             <Route path="/login" component={LogIn} />
             <Route path="/register" component={Register} />
             <Route path="/review" component={Review} />
+            <Route path="/search" render={() => <Search searchCar={this.state.searchCar} onClickedCar={this.onClickedCar}/>} />
             <Route path="/temporary" component={Temporary} />
             <Route path="*" component={Error} />
           </Switch>

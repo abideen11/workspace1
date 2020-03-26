@@ -15,6 +15,10 @@ class Header extends React.Component {
     // reDirectToRegister = () => {
     //     this.props.history.push('/register')
     // }
+    onLogOut = () => {
+        localStorage.clear();
+        window.location.href = '/';
+    }
     render() {
         return(
             <div className="main-head">
@@ -26,15 +30,21 @@ class Header extends React.Component {
                 </div>
                 <div className="div-sea">
                     <form className="form-sea">
-                        <input type="text" placeholder={"Look for a car..."} />
-                        <button><Link to="/temporary" style={{ color: 'inherit', textDecoration: 'none' }}><FontAwesomeIcon icon={faSearch} /></Link></button>
+                        <input type="text" value={this.props.value} onChange={(e) => this.props.onSearch(e.target.value)} placeholder={"Look for a car..."} />
+                        <button><Link to="/search" style={{ color: 'inherit', textDecoration: 'none' }}><FontAwesomeIcon icon={faSearch} /></Link></button>
                     </form>   
                 </div>
                 <div className="div-aa">
                     <ButtonToolbar>
+                        {localStorage.token ?
+                        <span className="span-aa-lo">
+                            <Button variant="outline-light" onClick={this.onLogOut}>Log Out</Button>
+                        </span>
+                        :
                         <span className="span-aa">
                         <Button variant="outline-light"><Link to="/login" style={{ color: 'inherit', textDecoration: 'none' }}>Login</Link></Button>
                         </span>
+                        }
                         <span className="span-aa2">
                         <Button variant="outline-light"><Link to="/register" style={{ color: 'inherit', textDecoration: 'none' }}>Register</Link></Button>
                         </span>
