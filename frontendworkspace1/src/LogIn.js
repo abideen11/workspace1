@@ -31,9 +31,8 @@ export default class LogIn extends React.Component {
     render() {
         return(
             <div className="div-log">
-                <div className="sub-log"></div>
                 <h2>Log In</h2>
-                <form>
+                <form onSubmit={(e) => this.login(e)}>
                     <label>Username or Email Address</label>{" "}
                     <input onChange={this.handleChange} name="username" placeholder="Username or Email" type="username"></input>
                     <br />

@@ -15,16 +15,20 @@ class Header extends React.Component {
     // reDirectToRegister = () => {
     //     this.props.history.push('/register')
     // }
+    // onLogOut = () => {
+    //     localStorage.clear();
+    //     window.location.href = '/';
+    // }
     onLogOut = () => {
-        localStorage.clear();
-        window.location.href = '/';
+        localStorage.clear()
+        window.location.href = '/'
     }
     render() {
         return(
             <div className="main-head">
                 <div className="head-tb">
                     <a></a>
-                    <span className="span-f"><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Home</Link></span>
+                    <span className="span-f"><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Axelerator</Link></span>
                     <span className="span-t"><Link to="/cars" style={{ color: 'inherit', textDecoration: 'none' }}>Cars</Link></span>
                     <span className="span-fo"><Link to="/review" style={{ color: 'inherit', textDecoration: 'none' }}>Write a review</Link></span>
                 </div>
@@ -36,7 +40,7 @@ class Header extends React.Component {
                 </div>
                 <div className="div-aa">
                     <ButtonToolbar>
-                        {localStorage.token ?
+                        {/* {localStorage.token ?
                         <span className="span-aa-lo">
                             <Button variant="outline-light" onClick={this.onLogOut}>Log Out</Button>
                         </span>
@@ -44,6 +48,16 @@ class Header extends React.Component {
                         <span className="span-aa">
                         <Button variant="outline-light"><Link to="/login" style={{ color: 'inherit', textDecoration: 'none' }}>Login</Link></Button>
                         </span>
+                        } */}
+                        {
+                            localStorage.token ?
+                            <span className="span-aa">
+                                <Button variant="outline-light" onClick={this.onLogOut}>Log Out</Button>
+                            </span>
+                            :
+                            <span className="span-aa">
+                                <Button variant="outline-light"><Link to="/login" style={{ color: 'inherit', textDecoration: 'none' }} >Login</Link></Button>
+                            </span>
                         }
                         <span className="span-aa2">
                         <Button variant="outline-light"><Link to="/register" style={{ color: 'inherit', textDecoration: 'none' }}>Register</Link></Button>

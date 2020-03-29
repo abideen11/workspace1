@@ -17,7 +17,7 @@ class FooterMore extends React.Component {
                     <span className="span-fmo"><Link style={{ color: 'inherit', textDecoration: 'none' }} onClick={this.reDirectToTemporary}>Site Map</Link></span>
                 </div>
                 <div className="div-fmo2">
-                    <p><FontAwesomeIcon icon={faCopyright} /> 2020 AwesomeBusinessName. All rights reserved.</p>
+                    <p><FontAwesomeIcon icon={faCopyright} /> 2020 Axelerator. All rights reserved.</p>
                 </div>
             </div>
         )
