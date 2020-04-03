@@ -28,7 +28,10 @@ class App extends React.Component {
     searchCar: [],
     clickedCar: null,
     eArray: null,
-    aux: null 
+    aux: null,
+    subtotalAmount: null,
+    taxAmount: null,
+    totalAmount: null 
   }
 
   componentDidMount() {
@@ -118,8 +121,8 @@ class App extends React.Component {
       }
     }
     )
-    
   }
+  
   render() {
     console.log(this.state.cars)
     console.log(this.state.firstColArray)
