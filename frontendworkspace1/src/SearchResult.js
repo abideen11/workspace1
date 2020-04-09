@@ -23,7 +23,6 @@ class SearchResult extends React.Component {
                         </ButtonToolbar>
                     </span>
                 </form> 
-                {/* <br /> */}
             </div>
         )
     }

@@ -5,20 +5,9 @@ import { Link, withRouter } from 'react-router-dom'
 import { ButtonToolbar, Button } from 'react-bootstrap'
 
 class Header extends React.Component {
-    // onClick={this.reDirectToTemporary}
     reDirectToTemporary = () => {
         this.props.history.push('/temporary')
     }
-    // reDirectToLogIn = () => {
-    //     this.props.history.push('/login')
-    // }
-    // reDirectToRegister = () => {
-    //     this.props.history.push('/register')
-    // }
-    // onLogOut = () => {
-    //     localStorage.clear();
-    //     window.location.href = '/';
-    // }
     onLogOut = () => {
         localStorage.clear()
         window.location.href = '/'
@@ -40,15 +29,6 @@ class Header extends React.Component {
                 </div>
                 <div className="div-aa">
                     <ButtonToolbar>
-                        {/* {localStorage.token ?
-                        <span className="span-aa-lo">
-                            <Button variant="outline-light" onClick={this.onLogOut}>Log Out</Button>
-                        </span>
-                        :
-                        <span className="span-aa">
-                        <Button variant="outline-light"><Link to="/login" style={{ color: 'inherit', textDecoration: 'none' }}>Login</Link></Button>
-                        </span>
-                        } */}
                         {
                             localStorage.token ?
                             <span className="span-aa">

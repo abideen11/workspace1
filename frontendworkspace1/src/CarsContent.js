@@ -5,6 +5,8 @@ import { withRouter } from 'react-router-dom';
 class CarsContent extends React.Component {
     reDirectToCarForm = () => {
         this.props.onClickedCar(this.props.car)
+        // this.props.onStartDate(date)
+        // this.props.onEndDate(date)
         this.props.history.push('/form')
     }
     render() {

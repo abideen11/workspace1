@@ -60,7 +60,7 @@ export default class CarsContainer extends React.Component {
                     </select> */}
                 </div>
                 <div className="sub-cn2">
-                    {this.props.carsArray.map(car => <CarsContent car={car} onClickedCar={this.props.onClickedCar} />)}
+                    {this.props.carsArray.map(car => <CarsContent car={car} onClickedCar={this.props.onClickedCar} onStartDate={this.props.onStartDate} onEndDate={this.props.onEndDate} />)}
                     {/* {this.props.firstColArray.map(car1 => <CarsContent car1={car1} /> )} */}
                     {/* <CarsContent car={car} /> */}
                 </div>

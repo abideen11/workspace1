@@ -31,7 +31,9 @@ class App extends React.Component {
     aux: null,
     subtotalAmount: null,
     taxAmount: null,
-    totalAmount: null 
+    totalAmount: null,
+    startDate: null,
+    endDate: null 
   }
 
   componentDidMount() {
@@ -122,6 +124,18 @@ class App extends React.Component {
     }
     )
   }
+
+  // onStartDate = (date1) => {
+  //   this.setState({
+  //     startDate: date1
+  //   })
+  // }
+
+  // onEndDate = (date2) => {
+  //   this.setState({
+  //     endDate: date2
+  //   })
+  // }
   
   render() {
     console.log(this.state.cars)
@@ -130,13 +144,15 @@ class App extends React.Component {
     console.log(this.state.carsArray)
     console.log(this.state.aux)
     console.log(this.state.searchCar) 
+    console.log(this.state.startDate)
+    console.log(this.state.endDate)
     return(
       <BrowserRouter>
         <div>
           <Route render={() => <Header onSearch={this.onSearch} />} /> 
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/cars" render={() => <CarsContainer carsArray={this.state.carsArray} onFilterCar={this.onFilterCar} onClickedCar={this.onClickedCar} />} />
+            <Route path="/cars" render={() => <CarsContainer carsArray={this.state.carsArray} onFilterCar={this.onFilterCar} onClickedCar={this.onClickedCar} onStartDate={this.onStartDate} onEndDate={this.onEndDate} />} />
             <Route path="/form" render={() => <CarsForm clickedCar={this.state.clickedCar}/>} />
             <Route path="/login" component={LogIn} />
             <Route path="/register" component={Register} />

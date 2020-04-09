@@ -75,17 +75,17 @@
 .div-srv {
   text-align: center;
 }
-.yu {
+.p-srv {
   margin: 40px;
 }
 .div-hrv {
   color: gray;
 }
-.bum {
+.sub-hrv {
   text-align: center;
   margin: 40px;
 }
-.bm {
+.hd-hrv {
   text-align: center;
   margin: 0 auto;
 }
@@ -317,6 +317,7 @@
   text-align: center;
 }
 .div-frm {
+  position: relative;
   width: 100%;
   height: 600px;
   margin: 20px 0 0 20px;
@@ -330,12 +331,21 @@
   text-align: center;
 }
 .frm-sbm {
+  position: absolute;
   color: white;
   padding: 10px 10px;
   background-color: blue;
   border: none;
   margin: 300px 0 0 290px;
   /* float: right; */
+}
+.p-frm {
+  position: absolute;
+  margin: 220px 0 0 200px;
+}
+.p2-frm {
+  position: absolute;
+  margin: 220px 0 0 330px;
 }
 /* .s-frm {
   margin-right: 20px;
