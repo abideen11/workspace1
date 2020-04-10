@@ -303,26 +303,20 @@
   padding: 20px;
   width: 100%;
   height: 330px;
-  /* top: 0; */
   text-align: center;
 }
 .div-err {
   width: 100%;
   height: 330px;
-  /* margin: 80px auto; */
-  /* padding: 75px; */
 }
 .div-err div {
   top: 0;
   text-align: center;
 }
-.div-frm {
+.sub-frm {
   position: relative;
-  width: 100%;
-  height: 600px;
-  margin: 20px 0 0 20px;
-  /* top: 0; */
-  /* text-align: center; */
+  height: 800px;
+  margin: 20px 0 0 50px;
 }
 .div-rsv {
   width: 100%;
@@ -336,20 +330,60 @@
   padding: 10px 10px;
   background-color: blue;
   border: none;
-  margin: 300px 0 0 290px;
-  /* float: right; */
+  margin: 250px 0 0 290px;
+}
+.ttl-frm {
+  position: absolute;
+  color: white;
+  padding: 10px 10px;
+  background-color: blue;
+  border: none;
+  margin: 250px 0 0 210px;
+}
+.img-frm {
+  width: 370px;
+  height: 330px;
+} 
+.p3-frm {
+  position: absolute;
+  margin: 10px 0 0 0;
+}
+.fst-frm {
+  position: absolute;
+  margin: 10px 0 0 250px;
+}
+.p4-frm {
+  position: absolute;
+  margin: 50px 0 0 0;
+}
+.lst-frm {
+  position: absolute;
+  margin: 50px 0 0 250px;
 }
 .p-frm {
   position: absolute;
-  margin: 220px 0 0 200px;
+  margin: 140px 0 0 108px;
 }
 .p2-frm {
   position: absolute;
-  margin: 220px 0 0 330px;
+  margin: 140px 0 0 323px;
 }
-/* .s-frm {
-  margin-right: 20px;
-} */
+.p5-frm {
+  position: absolute;
+  margin: 170px 0 0 180px;
+}
+.p6-frm {
+  position: absolute;
+  margin: 170px 0 0 330px;
+}
+.p7-frm {
+  position: absolute;
+  margin: 200px 0 0 224px;
+}
+.p8-frm {
+  position: absolute;
+  margin: 200px 0 0 323px;
+}
 .div-tmp {
   padding: 20px;
   width: 100%;

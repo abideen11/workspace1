@@ -36,7 +36,7 @@ class Header extends React.Component {
                             </span>
                             :
                             <span className="span-aa">
-                                <Button variant="outline-light"><Link to="/login" style={{ color: 'inherit', textDecoration: 'none' }} >Login</Link></Button>
+                                <Button variant="outline-light"><Link to="/login" style={{ color: 'inherit', textDecoration: 'none' }} >Log In</Link></Button>
                             </span>
                         }
                         <span className="span-aa2">

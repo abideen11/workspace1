@@ -1,13 +1,12 @@
 import React from 'react';
 import './App.css';
 
-import { BrowserRouter, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Header from './Header'
 import Footer from './Footer'
 import Home from './Home'
 import FooterMore from './FooterMore'
 import CarsContainer from './CarsContainer';
-import CarsContent from './CarsContent';
 import CarsForm from './CarsForm'
 import Error from './Error';
 import Review from './Review';
@@ -124,23 +123,10 @@ class App extends React.Component {
     }
     )
   }
-
-  // onStartDate = (date1) => {
-  //   this.setState({
-  //     startDate: date1
-  //   })
-  // }
-
-  // onEndDate = (date2) => {
-  //   this.setState({
-  //     endDate: date2
-  //   })
-  // }
   
   render() {
     console.log(this.state.cars)
     console.log(this.state.firstColArray)
-    // console.log(this.state.carsArray.slice(this.state.carsArray.length/2))
     console.log(this.state.carsArray)
     console.log(this.state.aux)
     console.log(this.state.searchCar) 

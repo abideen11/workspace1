@@ -1,6 +1,5 @@
 import React from 'react';
 import CarsContent from './CarsContent';
-import { GridList, GridListTile } from '@material-ui/core'
 
 export default class CarsContainer extends React.Component {
     render() {
