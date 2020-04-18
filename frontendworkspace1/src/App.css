@@ -299,6 +299,29 @@
 .div-rvw {
   padding: 20px;
 }
+.rvw-alt2 {
+  text-align: center;
+  height: 330px;
+}
+.rvw-alt {
+  text-align: center;
+}
+.rvw-oth {
+  text-align: center;
+  height: 330px;
+}
+.div-exp {
+  width: 800px;
+  height: 150px;
+  border: solid;
+  margin: auto;
+}
+.rvw-alt2 button {
+  border-style: none;
+  background-color: blue;
+  color: white;
+  padding: 10px 10px;
+}
 .div-subrvw {
   padding: 20px;
   width: 100%;
@@ -330,7 +353,15 @@
   padding: 10px 10px;
   background-color: blue;
   border: none;
-  margin: 250px 0 0 290px;
+  margin: 280px 0 0 290px;
+}
+.alt-sbm {
+  position: absolute;
+  color: black;
+  padding: 10px 10px;
+  background-color: white;
+  border: none;
+  margin: 280px 0 0 290px;
 }
 .ttl-frm {
   position: absolute;
@@ -338,7 +369,7 @@
   padding: 10px 10px;
   background-color: blue;
   border: none;
-  margin: 250px 0 0 210px;
+  margin: 280px 0 0 210px;
 }
 .img-frm {
   width: 370px;
@@ -368,21 +399,29 @@
   position: absolute;
   margin: 140px 0 0 323px;
 }
-.p5-frm {
+.p9-frm {
   position: absolute;
-  margin: 170px 0 0 180px;
+  margin: 170px 0 0 100px;
 }
-.p6-frm {
+.p10-frm {
   position: absolute;
   margin: 170px 0 0 330px;
 }
+.p5-frm {
+  position: absolute;
+  margin: 200px 0 0 180px;
+}
+.p6-frm {
+  position: absolute;
+  margin: 200px 0 0 330px;
+}
 .p7-frm {
   position: absolute;
-  margin: 200px 0 0 224px;
+  margin: 230px 0 0 224px;
 }
 .p8-frm {
   position: absolute;
-  margin: 200px 0 0 323px;
+  margin: 230px 0 0 323px;
 }
 .div-tmp {
   padding: 20px;
@@ -407,4 +446,75 @@
   height: 330px;
   text-align: center;
 }
+.div-rvcr {
+  position: relative;
+  width: 800px;
+  height: 150px;
+  border: solid;
+  margin: auto;
+  margin-bottom: 20px;
+}
+.rvcr-img {
+  position: absolute;
+  left: 0;
+  width: 100px;
+  height: 140px;
+}
+.rvcr-h2 {
+  position: absolute;
+  margin: 0 150px;
+}
+.rvcr-p {
+  position: absolute;
+  font-weight: bold;
+  margin-top: 105px;
+  margin-left: 150px;
+}
+.rvcr-p2 {
+  position: absolute;
+  margin-top: 105px;
+  margin-left: 250px;
+}
+.rvcr-p3 {
+  position: absolute;
+  font-weight: bold;
+  margin-top: 105px;
+  margin-left: 350px;
+}
+.rvcr-p4 {
+  position: absolute;
+  margin-top: 105px;
+  margin-left: 450px;
+}
+.rvcr-btn {
+  position: absolute;
+  margin-top: 85px;
+  margin-left: 315px;
+  color: white;
+  padding: 10px 10px;
+  background-color: blue;
+  border: none;
+}
+.rvw-frm {
+  padding: 20px 20px;
+}
+.rvw-img {
+  width: 500px;
+  height: 500px;
+}
+.rvw-txt {
+  width: 500px;
+  height: 200px;
+}
+.rvw-btn {
+  color: white;
+  background-color: blue;
+  padding: 10px 10px;
+  border: none;
+}
+.rfm-alt, .trw-alt {
+  text-align: center;
+  height: 330px;
+}
+
   

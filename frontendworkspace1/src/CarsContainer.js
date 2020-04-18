@@ -42,26 +42,9 @@ export default class CarsContainer extends React.Component {
                         <option value="600">$400 - $600</option>
                     </select>
                     <hr></hr>
-                    {/* <h5 className="h-br">Select Brand</h5>
-                    <select className="sel-br">
-                        <option value="lexus">Lexus</option>
-                        <option value="hyundai">Hyundai</option>
-                        <option value="ford">Ford</option>
-                        <option value="chevrolet">Chevrolet</option>
-                        <option value="nissan">Nissan</option>
-                        <option value="volkswagen">Volkswagen</option>
-                        <option value="chrysler">Chrysler</option>
-                    </select>
-                    <h5 className="h-mod">Select Model</h5>
-                    <select className="sel-mod">
-                        <option value="type1">Based on selected brand</option>
-                        <option value="type2">Based on selected brand</option>
-                    </select> */}
                 </div>
                 <div className="sub-cn2">
                     {this.props.carsArray.map(car => <CarsContent car={car} onClickedCar={this.props.onClickedCar} onStartDate={this.props.onStartDate} onEndDate={this.props.onEndDate} />)}
-                    {/* {this.props.firstColArray.map(car1 => <CarsContent car1={car1} /> )} */}
-                    {/* <CarsContent car={car} /> */}
                 </div>
             </div>
         )

@@ -25,7 +25,6 @@ export default class Register extends React.Component {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                // password_confirmation
                 user: {
                     username: this.state.username,
                     password: this.state.password,

@@ -1,9 +1,8 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-regular-svg-icons';
-import { Form, Col, Button } from 'react-bootstrap';
+import { withRouter } from 'react-router-dom';
+import ReviewCars from './ReviewCars';
 
-export default class Review extends React.Component {
+class Review extends React.Component {
     state = {
         reviewSubmitted: false 
     }
@@ -12,54 +11,36 @@ export default class Review extends React.Component {
             reviewSubmitted: !this.state.reviewSubmitted
         })
     }
-    render() { 
+    reDirectToLogIn = () => {
+        this.props.history.push('/login')
+    }
+    render() {
+        console.log(this.props.reservedCar) 
         return(
             this.state.reviewSubmitted ? <div className="div-subrvw">Thank you for your review. It will helps us improve our service.</div> :
+            localStorage.token ? 
+            this.props.reservedCar.length > 0 ? 
+            <div className="rvw-alt">
+                <h1>Review Cars</h1> 
+                <br />
+                {this.props.reservedCar.map(a => <ReviewCars a={a} onReviewCar={this.props.onReviewCar} />)}
+                <br />
+            </div>
+            :
+            <div className="rvw-oth">
+                <h1>No Car Has Been Reserved</h1>
+                <p>Please select the Car tab to see all of our options or if you have a particular car in mind, please use the search box to find.</p>
+            </div> 
+            :
             <div className="div-rvw">
-                <div>
-                    <Form>
-                        <Form.Row>
-                            <Form.Group as={Col} controlId="formGridFirstName">
-                                <Form.Label>First Name</Form.Label>
-                                <Form.Control type="firstName" placeholder="First Name" />
-                            </Form.Group>
-                            <Form.Group as={Col} controlId="formGridLastName">
-                                <Form.Label>Last Name</Form.Label>
-                                <Form.Control type="lastName" placeholder="Last Name" />
-                            </Form.Group>
-                        </Form.Row>
-                        <Form.Group controlId="formGridEmail">
-                                <Form.Label>Email</Form.Label>
-                                <Form.Control type="email" placeholder="Email" />
-                        </Form.Group>
-                        <Form.Group controlId="formGridAddress1">
-                            <Form.Label>Address</Form.Label>
-                            <Form.Control placeholder="1234 Main St" />
-                        </Form.Group>
-                        <Form.Group controlId="formGridAddress2">
-                            <Form.Label>Address 2</Form.Label>
-                            <Form.Control placeholder="Apartment, studio, or floor" />
-                        </Form.Group>
-                        <Form.Group controlId="reviewNumber">
-                            <Form.Label>Please rate your experience</Form.Label>
-                            <Form.Control as="select" multiple>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </Form.Control>
-                        </Form.Group>
-                        <Form.Group controlId="reviewTextarea">
-                            <Form.Label>Please include any more ways we can improve</Form.Label>
-                            <Form.Control as="textarea" rows="3" />
-                        </Form.Group>
-                        <Button variant="primary" type="submit" onClick={this.onSubmitReview}>
-                            Submit 
-                        </Button>
-                    </Form>
+                <div className="rvw-alt2">
+                    <h1>Please Log In</h1>
+                    <br />
+                    <button onClick={this.reDirectToLogIn}>Log In</button>
                 </div>
             </div>
         )
     }
 }
+
+export default withRouter(Review)

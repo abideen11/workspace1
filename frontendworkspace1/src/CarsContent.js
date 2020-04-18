@@ -7,8 +7,10 @@ class CarsContent extends React.Component {
         this.props.onClickedCar(this.props.car)
         this.props.history.push('/form')
     }
+    reDirectToLogIn = () => {
+        this.props.history.push('/login')
+    }
     render() {
-        console.log(this.props.onClickedCar)
         return(
             <div className="div-cnt">
                 <form className="sub-cfrm">
@@ -18,9 +20,15 @@ class CarsContent extends React.Component {
                     <span className="cfrm-p2">Miles:  {this.props.car.miles}</span> 
                     <span className="cfrm-p">Price:  ${this.props.car.price}</span>
                     <span className="cfrm-btn">
+                        {localStorage.token ?
                         <ButtonToolbar>
                             <Button variant="primary" onClick={this.reDirectToCarForm}>Select</Button>
                         </ButtonToolbar>
+                        :
+                        <ButtonToolbar>
+                            <Button variant="primary" onClick={this.reDirectToLogIn}>Login</Button>
+                        </ButtonToolbar>
+                        }
                     </span> 
                 </form>
             </div>

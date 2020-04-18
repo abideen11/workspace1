@@ -7,6 +7,9 @@ class SearchResult extends React.Component {
         this.props.onClickedCar(this.props.aCar)
         this.props.history.push('/form')
     }
+    reDirectToLogIn = () => {
+        this.props.history.push('/login')
+    }
     render() {
         console.log(this.props.onClickedCar)
         return(
@@ -18,9 +21,15 @@ class SearchResult extends React.Component {
                     <span className="cfrm-p2">Miles: {this.props.aCar.miles}</span>
                     <span className="cfrm-p">Price:  ${this.props.aCar.price}</span>
                     <span className="cfrm-btn">
+                        {localStorage.token ?
                         <ButtonToolbar>
-                            <Button variant="primary" onClick={this.reDirectToCarForm} >Select</Button>
+                            <Button variant="primary" onClick={this.reDirectToCarForm}>Select</Button>
                         </ButtonToolbar>
+                        :
+                        <ButtonToolbar>
+                            <Button variant="primary" onClick={this.reDirectToLogIn}>Login</Button>
+                        </ButtonToolbar>
+                        }
                     </span>
                 </form> 
             </div>

@@ -13,11 +13,29 @@ class CarsForm extends React.Component {
         convertStart: null,
         convertEnd: null,
         days: 0,
-        currentDate: new Date()
+        currentDate: new Date(),
+        insurance: 50,
+        subtotal: 0,
+        currentCar: {
+            make: this.props.clickedCar.make,
+            model: this.props.clickedCar.model,
+            year: this.props.clickedCar.year,
+            miles: this.props.clickedCar.miles,
+            price: this.props.clickedCar.price,
+            category: this.props.clickedCar.category, 
+            img_url: this.props.clickedCar.img_url,
+            start_Date: null,
+            end_Date: null,
+            total_Days: 0,
+            sub_Total: 0,
+            total_Insurance: 0,
+            total_Tax: 0,
+            total: 0
+        }
     }
     onFilledForm = () => {
         this.setState({
-            filledForm: !this.state.filledForm
+            filledForm: !this.state.filledForm,
         })
     }
     onStartDate = (e) => {
@@ -35,9 +53,11 @@ class CarsForm extends React.Component {
     }
     onStartTime = () => {this.setState({startTime: this.state.convertStart.getTime()})}
     onEndTime = () => {this.setState({endTime: this.state.convertEnd.getTime()})}
-    onSubTotal = () => {
+    onCounter = () => {this.setState({counter: this.state.counter++})}
+    onDays = () => {
         if(this.state.currentTime > this.state.startTime || this.state.startTime > this.state.endTime) {
             alert("Please enter a valid date: MM/DD/YYYY")
+            this.onCounter()
         }
         else {
             this.setState({
@@ -45,13 +65,24 @@ class CarsForm extends React.Component {
             })
         }
     }
+    onMore = () => {
+        this.setState(i => ({
+            currentCar: {
+                ...i.currentCar,
+                start_Date: this.state.startDate,
+                end_Date: this.state.endDate,
+                total_Days: this.state.days,
+                sub_Total: this.props.clickedCar.price*this.state.days,
+                total_Insurance: this.state.insurance*this.state.days,
+                total_Tax: Math.round(((this.props.clickedCar.price*this.state.days*0.0825) + Number.EPSILON)*100)/100,
+                total: (this.state.insurance*this.state.days) + (this.props.clickedCar.price*this.state.days) + Math.round(((this.props.clickedCar.price*this.state.days*0.0825) + Number.EPSILON)*100)/100
+            }
+        }))
+    }
+    onReservedCar = () => {
+        this.props.reservedCar.push(this.state.currentCar)
+    }
     render() {
-        console.log(this.state.currentDate)
-        console.log(this.state.startDate)
-        console.log(this.state.currentTime)
-        console.log(this.state.convertStart)
-        console.log(this.state.startTime)
-        console.log(this.state.endTime)
         return(
             this.state.filledForm ? <div className="div-rsv">Thank your for your reservation</div> :
             <div className="div-frm">
@@ -68,13 +99,19 @@ class CarsForm extends React.Component {
                 </form>
                 <p className="p-frm">Subtotal (${this.props.clickedCar.price}*{this.state.days} days):</p>
                 <p className="p2-frm"> {this.state.days > 0 ? this.props.clickedCar.price*this.state.days : null} </p>
+                <p className="p9-frm">Insurance (${this.state.insurance}*{this.state.days} days):</p>
+                <p className="p10-frm"> {this.state.days > 0 ? this.state.insurance*this.state.days : null} </p>
                 <p className="p5-frm">Tax (8.25%):</p>
                 <p className="p6-frm"> {this.state.days > 0 ? Math.round(((this.props.clickedCar.price*this.state.days*0.0825) + Number.EPSILON)*100)/100 : null} </p>
                 <p className="p7-frm">Total:</p>
-                <p className="p8-frm"> {this.state.days > 0 ? (this.props.clickedCar.price*this.state.days) + Math.round(((this.props.clickedCar.price*this.state.days*0.0825) + Number.EPSILON)*100)/100 : null} </p>
+                <p className="p8-frm"> {this.state.days > 0 ? (this.state.insurance*this.state.days) + (this.props.clickedCar.price*this.state.days) + Math.round(((this.props.clickedCar.price*this.state.days*0.0825) + Number.EPSILON)*100)/100 : null} </p>
                 <div className="div-cal"></div>
-                <button className="ttl-frm" onClick={() => {this.onEndTime() ; this.onSubTotal()}}>Total</button>
-                <button className="frm-sbm" onClick={() => {this.state.days > 0 ? this.onFilledForm() : alert("Please enter a valid date: MM/DD/YYYY")}}>Submit</button>
+                <button className="ttl-frm" onClick={() => {this.onEndTime() ; this.onDays() ; this.onMore()}}>Total</button>
+                {this.state.days > 0 ?
+                <button className="frm-sbm" onClick={() => {this.onFilledForm(); this.onReservedCar()}}>Accept</button>
+                :
+                <button className="alt-sbm" disabled>Accept</button>
+                }
             </div>
             </div>
         )
