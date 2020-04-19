@@ -118,6 +118,12 @@ class App extends React.Component {
       reviewCar: car 
     })
   } 
+
+  hasReviewedCar = () => {
+    this.setState({
+      reservedCar: this.state.reservedCar.filter(i => i !== this.state.reviewCar)
+    })
+  }
   
   render() {
     return(
@@ -131,7 +137,7 @@ class App extends React.Component {
             <Route path="/login" component={LogIn} />
             <Route path="/register" component={Register} />
             <Route path="/review" render={() => <Review reservedCar={this.state.reservedCar} onReviewCar={this.onReviewCar} />} />
-            <Route path="/reviewform" render={() => <ReviewForm reviewCar={this.state.reviewCar} />} />
+            <Route path="/reviewform" render={() => <ReviewForm reviewCar={this.state.reviewCar} hasReviewedCar={this.hasReviewedCar} />} />
             <Route path="/search" render={() => <Search searchCar={this.state.searchCar} onClickedCar={this.onClickedCar}/>} />
             <Route path="/temporary" component={Temporary} />
             <Route path="*" component={Error} />

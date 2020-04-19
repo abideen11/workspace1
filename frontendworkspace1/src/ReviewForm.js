@@ -49,7 +49,7 @@ export default class ReviewForm extends React.Component {
                 </select>
                 <br />
                 <br />
-                <button className="rvw-btn" onClick={this.onSubmit}>Submit</button>
+                <button className="rvw-btn" onClick={() => {this.onSubmit() ; this.props.hasReviewedCar()}}>Submit</button>
             </div>
         )
     }

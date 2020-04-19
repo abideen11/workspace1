@@ -15,7 +15,6 @@ class Review extends React.Component {
         this.props.history.push('/login')
     }
     render() {
-        console.log(this.props.reservedCar) 
         return(
             this.state.reviewSubmitted ? <div className="div-subrvw">Thank you for your review. It will helps us improve our service.</div> :
             localStorage.token ? 
