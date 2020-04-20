@@ -16,7 +16,6 @@ class Review extends React.Component {
     }
     render() {
         return(
-            this.state.reviewSubmitted ? <div className="div-subrvw">Thank you for your review. It will helps us improve our service.</div> :
             localStorage.token ? 
             this.props.reservedCar.length > 0 ? 
             <div className="rvw-alt">

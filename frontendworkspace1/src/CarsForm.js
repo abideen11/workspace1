@@ -84,7 +84,7 @@ class CarsForm extends React.Component {
     }
     render() {
         return(
-            this.state.filledForm ? <div className="div-rsv">Thank your for your reservation</div> :
+            this.state.filledForm ? <div className="div-rsv">Thank your for your reservation.</div> :
             <div className="div-frm">
             <div className="sub-frm">
                 <h1>{this.props.clickedCar.year} {this.props.clickedCar.make} {this.props.clickedCar.model}</h1>

@@ -11,7 +11,6 @@ class SearchResult extends React.Component {
         this.props.history.push('/login')
     }
     render() {
-        console.log(this.props.onClickedCar)
         return(
             <div className="div-srs">
                 <form className="sub-cfrm">

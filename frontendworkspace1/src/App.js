@@ -18,7 +18,6 @@ import ReviewForm from './ReviewForm';
 
 class App extends React.Component {
   state = {
-    user: {},
     cars: [],
     carsArray: [],
     carsArrayYear: [],
@@ -26,13 +25,6 @@ class App extends React.Component {
     searchCar: [],
     reservedCar: [],
     clickedCar: null,
-    eArray: null,
-    aux: null,
-    subtotalAmount: null,
-    taxAmount: null,
-    totalAmount: null,
-    startDate: null,
-    endDate: null,
     reviewCar: null 
   }
 
