@@ -4,15 +4,13 @@ export default class ReviewForm extends React.Component {
     state = {
         feedback: '',
         rating: null,
-        reviewComplete: false,
-        reviewWritten: 0
+        reviewComplete: false
     }
     onFeedback = (e) => {this.setState({feedback: e.target.value})}
     onRating = (e) => {this.setState({rating: e.target.value})}
     onSubmit = () => {
         if(this.state.feedback.split('').length > 0 && (this.state.rating !== null && this.state.rating !== "Please enter a rating")) {
             this.setState({reviewComplete: !this.state.reviewComplete})
-            this.setState({reviewWritten: this.state.reviewWritten += 1})
         }
         else {
             if(this.state.feedback === '') {
