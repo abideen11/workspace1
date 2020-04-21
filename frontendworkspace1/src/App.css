@@ -89,6 +89,10 @@
   text-align: center;
   margin: 0 auto;
 }
+.ret-reg {
+  text-align: center;
+  height: 330px;
+}
 .main-fmo {
   padding: 10px;
   overflow: hidden;
