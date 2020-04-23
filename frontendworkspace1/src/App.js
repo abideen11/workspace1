@@ -20,7 +20,6 @@ class App extends React.Component {
   state = {
     cars: [],
     carsArray: [],
-    carsArrayYear: [],
     filterCar: [],
     searchCar: [],
     reservedCar: [],
