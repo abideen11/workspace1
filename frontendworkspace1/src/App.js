@@ -76,8 +76,6 @@ class App extends React.Component {
   }
 
   onSearch = (e) => {
-    this.setState({aux: e})
-    this.setState({searchCar: []})
     this.state.cars.map(
       i => {if(i.make.toLowerCase() === e.toLowerCase()) {
         this.setState({
