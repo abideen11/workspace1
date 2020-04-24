@@ -44,7 +44,7 @@ export default class CarsContainer extends React.Component {
                     <hr></hr>
                 </div>
                 <div className="sub-cn2">
-                    {this.props.carsArray.map(car => <CarsContent car={car} onClickedCar={this.props.onClickedCar} onStartDate={this.props.onStartDate} onEndDate={this.props.onEndDate} />)}
+                    {this.props.carsArray.map(car => <CarsContent car={car} onClickedCar={this.props.onClickedCar} />)}
                 </div>
             </div>
         )

@@ -20,7 +20,6 @@ class App extends React.Component {
   state = {
     cars: [],
     carsArray: [],
-    filterCar: [],
     searchCar: [],
     reservedCar: [],
     clickedCar: null,
@@ -121,7 +120,7 @@ class App extends React.Component {
           <Route render={() => <Header onSearch={this.onSearch} />} /> 
           <Switch>
             <Route exact path="/" component={Home} />
-            <Route path="/cars" render={() => <CarsContainer carsArray={this.state.carsArray} onFilterCar={this.onFilterCar} onClickedCar={this.onClickedCar} onStartDate={this.onStartDate} onEndDate={this.onEndDate} />} />
+            <Route path="/cars" render={() => <CarsContainer carsArray={this.state.carsArray} onFilterCar={this.onFilterCar} onClickedCar={this.onClickedCar} />} />
             <Route path="/form" render={() => <CarsForm clickedCar={this.state.clickedCar} reservedCar={this.state.reservedCar}/>} />
             <Route path="/login" component={LogIn} />
             <Route path="/register" component={Register} />
