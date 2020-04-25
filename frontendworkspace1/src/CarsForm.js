@@ -53,11 +53,9 @@ class CarsForm extends React.Component {
     }
     onStartTime = () => {this.setState({startTime: this.state.convertStart.getTime()})}
     onEndTime = () => {this.setState({endTime: this.state.convertEnd.getTime()})}
-    onCounter = () => {this.setState({counter: this.state.counter++})}
     onDays = () => {
         if(this.state.currentTime > this.state.startTime || this.state.startTime > this.state.endTime) {
             alert("Please enter a valid date: MM/DD/YYYY")
-            this.onCounter()
         }
         else {
             this.setState({
