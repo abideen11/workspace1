@@ -40,7 +40,7 @@ export default class Register extends React.Component {
     }
     render() {
         return(
-            this.state.hasRegistered ? <div className="ret-reg">Thank you for registering</div> :
+            this.state.hasRegistered ? <div className="ret-reg">Thank you for registering.</div> :
             <div className="div-reg">
                 <h2>Register</h2>
                 <form onSubmit={(e) => this.login(e)}>
